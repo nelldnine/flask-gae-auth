@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <h1>Admin</h1>
+  {% include 'navigation.html' %}
+  <form method="post">
+    <div>
+      <label for="">Email</label>
+      <input type="text" name="email">
+    </div>
+    <div>
+      <label for="">Password</label>
+      <input type="password" name="password">
+    </div>
+    <div>
+      <label for="">Role</label>
+      <select name="role" id="">
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+    </div>
+    <button type="submit">Add User</button>
+  </form>
+{% endblock %}

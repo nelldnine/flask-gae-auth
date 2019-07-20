@@ -1,0 +1,11 @@
+<div>
+{% if 'user' in session %}
+  {% if session['user']['role'] == 'ADMIN' %}
+    <a href="{{ url_for('admin') }}">Admin</a>
+  {% endif %}
+  <a href="{{ url_for('users') }}">Users</a>
+  <a href="{{ url_for('logout') }}">Logout</a>
+{% else %}
+  <a href="{{ url_for('login') }}">Login</a>
+{% endif %}
+</div>
